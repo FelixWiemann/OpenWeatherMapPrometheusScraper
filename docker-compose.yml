@@ -1,0 +1,13 @@
+
+services:
+  weathertoprometheus:
+    image: weathertoprometheus
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    environment:
+      NODE_ENV: production
+    env_file:
+      - .env
+    ports:
+      - 4115:4115
